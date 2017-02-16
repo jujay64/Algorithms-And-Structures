@@ -45,7 +45,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -55,6 +57,7 @@
     <Compile Include="BinarySearchTests.cs" />
     <Compile Include="FindIndexOfFirstUniqueTests.cs" />
     <Compile Include="ShortestBinaryArray.cs" />
+    <Compile Include="SumOfOthersTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BinarySearch\BinarySearch.csproj">
@@ -72,6 +75,10 @@
     <ProjectReference Include="..\SumOfMultiplesOf3and5\SumOfMultiplesOf3and5.csproj">
       <Project>{3f0e2830-645d-4793-b884-4aea209a552b}</Project>
       <Name>SumOfMultiplesOf3and5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SumOfOthers\SumOfOthers.csproj">
+      <Project>{8d8ce796-c412-48c5-bc05-9d8c91e530a4}</Project>
+      <Name>SumOfOthers</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
